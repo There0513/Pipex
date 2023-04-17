@@ -24,6 +24,7 @@ This: <br>
 *$> ./pipex file1 cmd1 cmd2 cmd3 ... cmdn file2* <br>
 Should behave like: <br>
 *< file1 cmd1 | cmd2 | cmd3 ... | cmdn > file2* <br>
+<br>
 • Support « and » when the first parameter is "here_doc". <br>
 This: <br>
 *$> ./pipex here_doc LIMITER cmd cmd1 file* <br>
