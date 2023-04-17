@@ -12,20 +12,20 @@ It must take 4 arguments: <br>
 It must behave exactly the same as the shell command below: <br>
 $> < file1 cmd1 | cmd2 > file2 <br>
 
-Examples <br>
-$> ./pipex infile "ls -l" "wc -l" outfile <br>
-Should behave like: < infile ls -l | wc -l > outfile <br>
-$> ./pipex infile "grep a1" "wc -w" outfile <br>
-Should behave like: < infile grep a1 | wc -w > outfile <br>
+**Examples** <br>
+*$> ./pipex infile "ls -l" "wc -l" outfile <br>*
+Should behave like: *< infile ls -l | wc -l > outfile* <br>
+*$> ./pipex infile "grep a1" "wc -w" outfile <br>*
+Should behave like: *< infile grep a1 | wc -w > outfile* <br>
 
-Bonus part <br>
+**Bonus part** <br>
 • Handle multiple pipes. <br>
 This: <br>
-$> ./pipex file1 cmd1 cmd2 cmd3 ... cmdn file2 <br>
+*$> ./pipex file1 cmd1 cmd2 cmd3 ... cmdn file2* <br>
 Should behave like: <br>
-< file1 cmd1 | cmd2 | cmd3 ... | cmdn > file2 <br>
+*< file1 cmd1 | cmd2 | cmd3 ... | cmdn > file2* <br>
 • Support « and » when the first parameter is "here_doc". <br>
 This: <br>
-$> ./pipex here_doc LIMITER cmd cmd1 file <br>
+*$> ./pipex here_doc LIMITER cmd cmd1 file* <br>
 Should behave like: <br>
-cmd << LIMITER | cmd1 >> file <br>
+*cmd << LIMITER | cmd1 >> file* <br>
