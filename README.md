@@ -11,13 +11,13 @@ It must take 4 arguments: <br>
 
 It must behave exactly the same as the shell command below: <br>
 $> < file1 cmd1 | cmd2 > file2 <br>
-<br>
+<br><br>
 **Examples** <br>
 *$> ./pipex infile "ls -l" "wc -l" outfile <br>*
 Should behave like: *< infile ls -l | wc -l > outfile* <br>
 *$> ./pipex infile "grep a1" "wc -w" outfile <br>*
 Should behave like: *< infile grep a1 | wc -w > outfile* <br>
-<br>
+<br><br>
 **Bonus part** <br>
 • Handle multiple pipes. <br>
 This: <br>
